@@ -1,0 +1,24 @@
+--- C:\Users\Kevin\senior\ADL\adl-hw1-example-code\src\modules\rnn_attn_net.py
++++ C:\Users\Kevin\senior\ADL\adl-hw1-example-code\src\modules\rnn_attn_net.py
+@@ -7,7 +7,7 @@
+ 
+     def __init__(self, dim_embeddings,
+                  similarity='inner_product',
+-                 n_layers=2
++                 n_layers=3
+                 ):
+         super(rnn_attn_net, self).__init__()
+         #ExampleNet
+@@ -33,6 +33,12 @@
+         self.attn = Attn('general',self.dim_embeddings)
+         self.gru_attn = torch.nn.GRU(dim_embeddings,dim_embeddings,self.n_layers,batch_first=True)
+ 
++        self.dnn = torch.nn.Sequential(
++            torch.nn.Linear(dim_embeddings,128),
++            torch.nn.ReLU(),
++            torch.nn.Linear(128,64),
++            torch.nn.Linear(64,1),
++        )
+     def forward(self, context, context_lens, options, option_lens):
+         B_size = context.size(0)
+         ctx_hidden = self._init_hidden(B_size)

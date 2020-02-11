@@ -1,0 +1,9 @@
+--- C:\Users\Kevin\senior\ADL\adl-hw1-example-code\src\modules\rnn_attn_net.py
++++ C:\Users\Kevin\senior\ADL\adl-hw1-example-code\src\modules\rnn_attn_net.py
+@@ -1,5 +1,5 @@
+ class Attn(torch.nn.Module):
+-    def __init__(self, method='concat', hidden_size=300,mlp=False):
++    def __init__(self, method='general', hidden_size=300,mlp=False):
+         super(Attn, self).__init__()
+         self.d = torch.device('cuda:0' if torch.cuda.is_available()
+                                        else 'cpu')
