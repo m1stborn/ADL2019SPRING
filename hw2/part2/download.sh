@@ -1,0 +1,5 @@
+#/usr/bin bash
+
+wget -O /model/model_22.29/weight.1 "https://www.dropbox.com/s/slzlh8hbonsfjl1/weight.1?dl=1"
+wget -O /cache/214d4777e8e3eb234563136cd3a49f6bc34131de836848454373fa43f10adc5e.abfbb80ee795a608acbf35c7bf2d2d58574df3887cdd94b355fc67e03fddba05 "https://www.dropbox.com/s/31uvegos1st8b0q/214d4777e8e3eb234563136cd3a49f6bc34131de836848454373fa43f10adc5e.abfbb80ee795a608acbf35c7bf2d2d58574df3887cdd94b355fc67e03fddba05?dl=1"
+wget -O /cache/214d4777e8e3eb234563136cd3a49f6bc34131de836848454373fa43f10adc5e.abfbb80ee795a608acbf35c7bf2d2d58574df3887cdd94b355fc67e03fddba05.json "https://www.dropbox.com/s/kdag5qrvvzvecjj/214d4777e8e3eb234563136cd3a49f6bc34131de836848454373fa43f10adc5e.abfbb80ee795a608acbf35c7bf2d2d58574df3887cdd94b355fc67e03fddba05.json?dl=1"
